@@ -4,24 +4,28 @@
 // Join all functions inside a new function called game, this should play 5 rounds keeping score and report who wins or loses.
 
 function computerPlay() {
-    const choices = ['rock', 'paper', 'scissors'];
+    const choices = ["rock", "paper", "scissors"];
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
 function playRound(playerSelection, computerSelection) {
     computerSelection = computerPlay().toLocaleLowerCase();
-    console.log('computer plays ' + computerSelection)
+    console.log("computer plays " + computerSelection)
     playerSelection = prompt("Select rock, paper or scissors").toLocaleLowerCase();
 
     if (playerSelection === computerSelection) {
         alert("it's a draw")
-    } else if (playerSelection == 'rock' && computerSelection == 'scissors'){
+    } else if (playerSelection == "rock" && computerSelection == "scissors"){
         alert("You win! Rock beats Scissors")
-    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+    } else if (playerSelection == "scissors" && computerSelection == "paper") {
         alert("You win! Scissors beat Paper")
-    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+    } else if (playerSelection == "paper" && computerSelection == "rock") {
         alert("You win! Paper beat rock")
     } else {
         alert ("You lose! " + computerSelection + " beat " + playerSelection)
     }
+}
+
+function game() {
+
 }
